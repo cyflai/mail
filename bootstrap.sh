@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat << EOF | > /etc/systemd/system/abec.service
+cat << EOF > /etc/systemd/system/abec.service
 [Unit]
 Description=abec
 
