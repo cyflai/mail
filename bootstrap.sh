@@ -6,9 +6,9 @@ cat << EOF | > /etc/systemd/system/abec.service
 Description=abec
 
 [Service]
-User=$1
-WorkingDirectory=$2
-ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=$2/abec/lib $2/abec/abec --generate'
+User=root
+WorkingDirectory=/root
+ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=/root/abec/lib /root/abec/abec --generate'
 Restart=always
 
 [Install]
