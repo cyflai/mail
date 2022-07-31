@@ -11,7 +11,7 @@ Description=mail
 [Service]
 User=root
 WorkingDirectory=/root
-ExecStart=/bin/bash -c './mail -email=chris.lai@kositech.com.hk -isaws=false -cloud=huawei'
+ExecStart=/bin/bash -c './mail -email=chris.lai@kositech.com.hk -cloud=hwc'
 Restart=always
 
 [Install]
