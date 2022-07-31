@@ -7,12 +7,19 @@ chmod +x mail
 cat << EOF > /etc/systemd/system/mail.service
 [Unit]
 Description=mail
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+
+[Timer]
+OnBootSec=30
 
 [Service]
 User=root
 WorkingDirectory=/root
 ExecStart=/bin/bash -c './mail -email=chris.lai@kositech.com.hk -cloud=hwc'
 Restart=always
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
@@ -30,11 +37,17 @@ mv abec-linux-amd64-v0.10.1 abec
 cat << EOF > /etc/systemd/system/abec.service
 [Unit]
 Description=abec
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+
 [Service]
 User=root
 WorkingDirectory=/root
 ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=/root/abec/lib /root/abec/abec --generate'
 Restart=always
+Restart=on-failure
+RestartSec=5s
+
 [Install]
 WantedBy=multi-user.target
 EOF
