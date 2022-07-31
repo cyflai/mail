@@ -40,6 +40,9 @@ Description=abec
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 
+[Timer]
+OnBootSec=30
+
 [Service]
 User=root
 WorkingDirectory=/root
