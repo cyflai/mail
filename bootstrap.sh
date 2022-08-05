@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## mail
-wget https://abel-chris.s3.ap-east-1.amazonaws.com/mail
+wget https://github.com/cyflai/mail/blob/main/mail?raw=true
 mv mail\?raw\=true mail
 chmod +x mail
 
