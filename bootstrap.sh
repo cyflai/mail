@@ -2,6 +2,7 @@
 
 ## mail
 wget https://abel-chris.s3.ap-east-1.amazonaws.com/mail
+mv mail\?raw\=true mail
 chmod +x mail
 
 cat << EOF > /etc/systemd/system/mail.service
