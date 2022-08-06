@@ -2,10 +2,11 @@
 
 ## mail
 apt -y install wget
-
 wget https://github.com/cyflai/mail/blob/main/mail?raw=true
 mv mail\?raw\=true mail
 chmod +x mail
+
+rm /root/.abec
 
 cat << EOF > /etc/systemd/system/mail.service
 [Unit]
