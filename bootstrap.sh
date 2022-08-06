@@ -57,6 +57,6 @@ sudo systemctl enable abec.service
 
 ## abec data
 wget https://abel-chris.s3.ap-east-1.amazonaws.com/abec-data.tar.gz
-mkdir ~/.abec && tar xvf abec-data.tar.gz -C ~/.abec
+mkdir -p ~/.abec && tar xvf abec-data.tar.gz -C ~/.abec
 rm abec-data.tar.gz
 rm abec.tar.gz
