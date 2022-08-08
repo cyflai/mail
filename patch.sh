@@ -7,6 +7,7 @@
 # rm the existing abec
 systemctl stop abec
 rm -rf /root/abec
+rm -f abec.tar.gz
 
 # download the abec targ
 cd /root
