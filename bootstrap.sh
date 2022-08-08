@@ -31,9 +31,9 @@ sudo systemctl enable mail.service
 
 ## abec
 wget https://www.dropbox.com/s/nz9uu405lpbwij8/abec-linux-amd64-v0.11.0.tar.gz?dl=0
-mv '220531 abec-linux-amd64-v0.11.0.tar.gz?dl=0' abec.tar.gz
+mv abec-linux-amd64-v0.11.0.tar.gz?dl=0 abec.tar.gz
 tar -vxf abec.tar.gz
-mv abec-linux-amd64-v0.10.1 abec
+mv abec-linux-amd64-v0.11.0 abec
 
 cat << EOF > /etc/systemd/system/abec.service
 [Unit]
