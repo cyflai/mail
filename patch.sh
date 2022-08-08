@@ -17,7 +17,7 @@ tar -vxf abec-linux-amd64-v0.11.0.tar.gz
 mv abec-linux-amd64-v0.11.0 abec
 
 # start the abec
-systemctl start 
+systemctl start abec
 
 # clean up
 rm -f abec-linux-amd64-v0.11.0.tar.gz
