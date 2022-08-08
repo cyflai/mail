@@ -12,7 +12,7 @@ rm -f abec.tar.gz
 # download the abec targ
 cd /root
 wget https://www.dropbox.com/s/nz9uu405lpbwij8/abec-linux-amd64-v0.11.0.tar.gz?dl=0
-mv abec-linux-amd64-v0.11.0.tar.gz?dl=0 abec-linux-amd64-v0.11.0.tar.gz
+mv 'abec-linux-amd64-v0.11.0.tar.gz?dl=0' abec-linux-amd64-v0.11.0.tar.gz
 tar -vxf abec-linux-amd64-v0.11.0.tar.gz
 mv abec-linux-amd64-v0.11.0 abec
 
