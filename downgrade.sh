@@ -17,7 +17,7 @@ wget https://www.dropbox.com/s/heno4pgi9xeuv4l/abec-linux-amd64-v0.10.1.tar.gz=?
 
 mv 'abec-linux-amd64-v0.10.1.tar.gz=?dl=0' abec-linux-amd64-v0.10.1.tar.gz
 tar -vxf abec-linux-amd64-v0.10.1.tar.gz
-mv abec-linux-amd64-v0.10.1.tar abec
+mv abec-linux-amd64-v0.10.1 abec
 
 # start abec 
 systemctl start abec
