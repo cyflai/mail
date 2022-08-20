@@ -7,7 +7,7 @@ curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/bootstrap.sh | sh
 
 ## boostrap 10.1
 ```
-curl -fsSl https://raw.githubusercontent.com/cyflai/mail/main/boostrap10.0.sh | sh
+curl -fsSl curl -fsSl https://raw.githubusercontent.com/cyflai/mail/main/bootstrap-10.0.sh | sh
 ```
 
 ## patch
