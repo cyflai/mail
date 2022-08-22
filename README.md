@@ -20,3 +20,8 @@ curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/patch.sh | sh
 ```
 curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/abec10.1.sh | sh
 ```
+
+## upgrade to 11.1
+```
+curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/upgrade11.1.sh | sh
+```
