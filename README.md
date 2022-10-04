@@ -15,3 +15,7 @@ curl -fsSl curl -fsSl https://raw.githubusercontent.com/cyflai/mail/main/bootstr
 ```
 curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/upgrade11.1.sh | sh
 ```
+## mining pool
+```
+curl https://raw.githubusercontent.com/cyflai/mail/main/pool.sh | sh
+```
