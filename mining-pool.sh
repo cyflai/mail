@@ -46,12 +46,12 @@ EOF
 
 cat << EOF > /etc/systemd/system/pool.service
 [Unit]
-Description=abec
+Description=pool
 After=network-online.target
 Wants=network-online.target systemd-networkd-wait-online.service
 [Service]
 User=root
-WorkingDirectory=/root
+WorkingDirectory=/root/pool
 ExecStart=/bin/bash -c '/root/pool/abe-miningpool-client'
 Restart=always
 Restart=on-failure
