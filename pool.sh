@@ -62,10 +62,10 @@ EOF
 
 rm -f abe-miningpool-client-linux-amd64-v0.11.2-b.tar.gz
 
-sudo systemctl enable abec.service
+sudo systemctl enable pool.service
 
 echo update your mining address at /root/pool/miningpool-client.conf
-echo after updated your mining address run sudo systemctl start abec.service
+echo after updated your mining address run sudo systemctl start pool.service
 
 
 
