@@ -1,21 +1,26 @@
-## this use bash shell
 #!/bin/bash
-# Path: pool.sh
 
+##################################################################
+## you need to sudo su (as root) before you can run this script ##
+##################################################################
+
+## the script install every under /root/pool
+
+## lean up if any old setting
 rm -f abe-miningpool-client-linux-amd64-v0.11.2-b.tar.gz
 rm -rf pool
 rm -f abe-miningpool-client-macos-amd64-v0.11.2-b
+rm -f /etc/systemd/system/pool.service
 
 cd /root
 
+## download the sw
 wget https://abelian-public.s3.amazonaws.com/abe-miningpool-client-linux-amd64-v0.11.2-b.tar.gz
-
 tar -zxvf abe-miningpool-client-linux-amd64-v0.11.2-b.tar.gz
-
 mv abe-miningpool-client-linux-amd64-v0.11.2-b pool && cd pool
 
+## create a mining pool conf
 cat << EOF > miningpool-client.conf
-
 [Application Options]
 
 ; pooladdress specifies the ip address and the port of pool server to connect with (default: localhost:27777).
@@ -44,6 +49,7 @@ workernum=4
 EOF
 
 
+## create a systemd service
 cat << EOF > /etc/systemd/system/pool.service
 [Unit]
 Description=pool
@@ -62,14 +68,11 @@ EOF
 
 rm -f abe-miningpool-client-linux-amd64-v0.11.2-b.tar.gz
 
-sudo systemctl enable pool.service
+systemctl enable pool
 
+echo --------------------------------------------------------------
 echo update your mining address at /root/pool/miningpool-client.conf
-echo after updated your mining address run sudo systemctl start pool.service
+echo run ./root/pool/abe-miningpool-client
+echo after updated your mining address run systemctl start pool
+echo
 
-
-
-
-# echo Input your wallet address?
-# read MYADDR
-# sed -i -e "s/MYADDRESS/${MYADDR}/g" miningpool-client.conf
