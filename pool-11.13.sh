@@ -8,7 +8,7 @@
 
 ## lean up if any old setting
 rm -f abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
-rm -rf pool
+rm -rf /root/pool
 rm -f /etc/systemd/system/pool.service
 
 cd /root
