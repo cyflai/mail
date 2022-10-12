@@ -7,16 +7,14 @@
 ## the script install every under /root/pool
 
 ## lean up if any old setting
-rm -f abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
-rm -rf /root/pool
-rm -f /etc/systemd/system/pool.service
-
 cd /root
+rm -f abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
+rm -f /etc/systemd/system/pool.service
 
 ## download the sw
 wget https://abelian-public.s3.us-east-2.amazonaws.com/v0.11.3/abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
 tar -zxvf abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
-mv abe-miningpool-client-linux-amd64-v0.11.3 pool && cd pool
+cd pool && cp abe-miningpool-client-linux-amd64-v0.11.3/abe-miningpool-client .
 
 ## create a mining pool conf
 cat << EOF > miningpool-client.conf
