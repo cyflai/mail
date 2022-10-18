@@ -17,11 +17,11 @@ curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/upgrade11.1.sh | s
 ```
 ## mining pool
 ```
-https://raw.githubusercontent.com/cyflai/mail/main/pool-11.13.sh | sh
+curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/pool-11.13.sh | sh
 ```
 
 
 ## upgrade to 113
 ```
-https://raw.githubusercontent.com/cyflai/mail/main/pool113.sh | sh
+curl -fsSL https://raw.githubusercontent.com/cyflai/mail/main/pool113.sh | sh
 ```
