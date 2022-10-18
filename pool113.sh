@@ -63,6 +63,7 @@ WantedBy=multi-user.target
 EOF
 
 rm -f abe-miningpool-client-linux-amd64-v0.11.3.tar.gz
+systemctl daemon-reload
 
 systemctl enable pool
 
